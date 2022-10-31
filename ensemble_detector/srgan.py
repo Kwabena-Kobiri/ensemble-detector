@@ -3,13 +3,13 @@ import time
 import imutils
 import time
 
-image = cv2.imread('../test images/images.jfif')
-resized_image = imutils.resize(image, width=400)
+# image = cv2.imread('../test images/blur 2.jpg')
+# resized_image = imutils.resize(image, width=400)
 # # print(image[0])
 # # print()
 # # print(resized_image[0])
 
-model = cv2.dnn_superres.DnnSuperResImpl_create()
+# model = cv2.dnn_superres.DnnSuperResImpl_create()
 
 # start = time.time()
 # model.readModel('ESPCN_x2.pb')
@@ -18,6 +18,7 @@ model = cv2.dnn_superres.DnnSuperResImpl_create()
 # end = time.time()
 # print('Time spent in enhancing image with ESPCN is: ', end-start)
 # cv2.imshow('ESPCN',enhanced_espcn)
+# cv2.imshow('Original',resized_image)
 
 
 # start = time.time()
@@ -31,7 +32,7 @@ model = cv2.dnn_superres.DnnSuperResImpl_create()
 # cv2.imshow( "Original", resized_image)
 
 ##################### ENHANCING VIDEO QUALITY #################################
-# # vid = cv2.VideoCapture('../test images/video 1.mp4')
+vid = cv2.VideoCapture('../test images/video 1.mp4')
 
 model = cv2.dnn_superres.DnnSuperResImpl_create()
 model.readModel('ESPCN_x2.pb')
