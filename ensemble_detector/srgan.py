@@ -32,25 +32,25 @@ import time
 # cv2.imshow( "Original", resized_image)
 
 ##################### ENHANCING VIDEO QUALITY #################################
-vid = cv2.VideoCapture('../test images/video 1.mp4')
+# vid = cv2.VideoCapture('../test images/video 1.mp4')
 
-model = cv2.dnn_superres.DnnSuperResImpl_create()
-model.readModel('ESPCN_x2.pb')
-model.setModel('espcn',2)
+# model = cv2.dnn_superres.DnnSuperResImpl_create()
+# model.readModel('ESPCN_x2.pb')
+# model.setModel('espcn',2)
 
-while True:
-    ret, frame = vid.read()
+# while True:
+#     ret, frame = vid.read()
     
-    resized_frame = imutils.resize(frame, width=400)
-    enhanced_espcn = model.upsample(resized_frame)
+#     resized_frame = imutils.resize(frame, width=400)
+#     enhanced_espcn = model.upsample(resized_frame)
     
-    cv2.imshow('Original', resized_frame)
-    cv2.imshow('Enhanced', enhanced_espcn)
+#     cv2.imshow('Original', resized_frame)
+#     cv2.imshow('Enhanced', enhanced_espcn)
     
-    key = cv2.waitKey(10) & 0xFF
+#     key = cv2.waitKey(10) & 0xFF
     
-    if key == ord("q"):
-        break
+#     if key == ord("q"):
+#         break
 
 # cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -8,6 +8,8 @@ packages = [{include = "ensemble_detector"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+opencv-contrib-python = "^4.6.0.66"
+imutils = "^0.5.4"
 
 
 [build-system]
